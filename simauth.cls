@@ -32,7 +32,7 @@
 % Font change 30/3/2010 
 % simauth.cls --- For Statist. Med.
 
-\def\update{2010/03/10 v3.00}
+\def\update{2012/03/10 v3.00}
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{simauth}[\update\ Statist. Med.]
@@ -233,9 +233,9 @@
   \global\let\and\relax
 }
 \def\@maketitle{\vspace*{-18pt}%
-\noindent{\scriptsize{Received XXXX}}\hfill\mbox{}\par
-\vspace{10pt}
-\noindent{\normalsize(www.interscience.wiley.com) DOI: 10.1002/\DOI}%
+%\noindent{\scriptsize{Received XXXX}}\hfill\mbox{}\par
+%\vspace{10pt}
+%\noindent{\normalsize(www.interscience.wiley.com) DOI: 10.1002/\DOI}%
   \null
   \vskip 12pt %
     {\titlesize\bfseries\raggedright\@title \par}%
@@ -245,12 +245,7 @@
       %
         \raggedright\bfseries\@author
       \par}%
-      \vskip 3pt
- %{\normalsize
-%      \lineskip .5em%
-%      %
-%        {\raggedright\emph\@address}
-%      \par}%     
+      \vskip 3pt    
     \vskip 18pt%
     {\noindent\usebox\absbox\par}
     {\lineskip 1.5em%
@@ -259,7 +254,7 @@
       \vspace{7pt}
     \noindent\rule{\textwidth}{5.0pt}
     \par
-  \vskip 0.5em}
+ \vskip 0.5em}
  
 \def\startpage{\pageref{FirstPage}}
 \def\endpage{\pageref{LastPage}}
@@ -270,22 +265,31 @@
 \gdef\copyrightline{Copyright \copyright\ \volumeyear\ John Wiley \& Sons, Ltd.}
 \def\runninghead#1{\markboth{{#1}}{Statistics in Medicine}}
 
-\gdef\rhtext{{\huge\begin{tabular}[b]{@{}l@{}}Statistics\\[-3pt]
-in Medicine\end{tabular}}}
+\gdef\rhtext{
+    {\Large
+        \begin{tabular}
+            [b]{@{}l@{}}Introducci\'{o}n a la Investigaci\'{o}n
+        \end{tabular}
+    }
+}
 
 \gdef\ssboxnum{\colorbox{black}{\normalsize\textcolor{white}{\thepage}}}
 
 \def\ps@title{%
 \def\@oddhead{\parbox{\textwidth}{%
-{\Large\bfseries Research Article}\hfill{\rhtext}\\[-2pt]
+{\Large Instituto Tecnol\'{o}gico de Costa Rica\\ 
+    Escuela de Ingenier\'{i}a en Computaci\'{o}n\\
+    Maestr\'{i}a en Computaci\'{o}n}\hfill{\rhtext}\\[-3pt]
 \noindent\rule{\textwidth}{5.0pt}%
 }}%
 \let\@evenhead\@oddhead
 \def\@oddfoot{\parbox[t]{\textwidth}{%
 \noindent\rule{\textwidth}{5.0pt}\par\vskip -2pt
-{\small\emph{Statist.\ Med.}\ {\bfseries\volumeyear}, \volumenumber\ \startpage--\endpage\hfill\copyrightline\hfill\mbox{}\\
-\textit{Prepared using \textsf{simauth.cls} [Version: \update]}\mbox{}\\
-}}}
+{\small\emph{ININ -- Segundo Semestre 2015}\ \startpage--\endpage\hfill
+Tarea \#3: Falacias de razonamiento \hfill Carlos Mart\'{i}n Flores -- Raquel Rodr\'{i}guez \mbox{}\mbox{}\\
+}}
+
+}
 \let\@evenfoot\@oddfoot}
 
 \def\ps@sim{%
@@ -294,11 +298,9 @@ in Medicine\end{tabular}}}
 \def\@oddhead{\parbox{\textwidth}{{\normalsize\leftmark\hfill\rhtext}\\[-2pt]
 \noindent\rule{\textwidth}{5.0pt}}}
 \def\@evenfoot{\parbox[t]{\textwidth}{\noindent\rule{\textwidth}{5.0pt}\par
-\ssboxnum\quad\small www.sim.org\hfill\copyrightline\hfill\emph{Statist.\ Med.}\ {\bfseries\volumeyear}, \volumenumber\ \startpage--\endpage\\
-\textit{Prepared using \textsf{simauth.cls}}}}
+\ssboxnum\quad \small \emph{ININ -- Segundo Semestre 2015}  \hfill Tarea \#3: Falacias de razonamiento \hfill Carlos Mart\'{i}n Flores -- Raquel Rodr\'{i}guez \ \startpage--\endpage}}
 \def\@oddfoot{\parbox[t]{\textwidth}{\noindent\rule{\textwidth}{5.0pt}\par
-\small \emph{Statist.\ Med.}\ {\bfseries\volumeyear}, \volumenumber\ \startpage--\endpage\hfill\copyrightline\hfill www.sim.org\quad\ssboxnum\\
-\textit{Prepared using \textsf{simauth.cls}}}}}
+\small \emph{ININ -- Segundo Semestre 2015}\ \startpage--\endpage\hfill Tarea \#3: Falacias de razonamiento \hfill Carlos Mart\'{i}n Flores -- Raquel Rodr\'{i}guez\quad\ssboxnum}}}
 
 \let\@hangfrom\noindent %Remove indent on section turnovers
 \renewcommand{\@seccntformat}[1]{{\csname the#1\endcsname.}\hspace{0.5em}}
@@ -370,4 +372,3 @@ in Medicine\end{tabular}}}
 \pagestyle{sim}
 \normalsize
 \sloppy
-
